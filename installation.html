@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; PYCELLGA Documentation 1.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=292eb321"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Components of pycellga" href="pycellga.html" />
+    <link rel="prev" title="PYCELLGA Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PYCELLGA Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents :</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-from-pypi">Installing from PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-from-source">Installing from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-dependencies">Optional Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verifying-the-installation">Verifying the Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uninstallation">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pycellga.html">Components of pycellga</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.neighborhoods.html">Neighborhood Operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.neighborhoods.html#the-concept-of-neighborhood"><strong>The Concept of Neighborhood</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.neighborhoods.html#neighborhood-scheme-examples"><strong>Neighborhood Scheme Examples</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.neighborhoods.html#api-references"><strong>API References</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.neighborhoods.html#linear-5"><strong>Linear 5</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.neighborhoods.html#linear-9"><strong>Linear 9</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.neighborhoods.html#compact-9"><strong>Compact 9</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.neighborhoods.html#compact-13"><strong>Compact 13</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.neighborhoods.html#compact-21"><strong>Compact 21</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.neighborhoods.html#compact-25"><strong>Compact 25</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.mutation.html">Mutation Operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.mutation.html#understanding-mutation"><strong>Understanding Mutation</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.mutation.html#mutation-examples"><strong>Mutation Examples</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.mutation.html#api-references"><strong>API References</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.mutation.html#bit-flip-mutation"><strong>Bit Flip Mutation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.mutation.html#byte-mutation"><strong>Byte Mutation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.mutation.html#randomized-byte-mutation"><strong>Randomized Byte Mutation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.mutation.html#uniform-float-mutation"><strong>Uniform Float Mutation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.mutation.html#insertion-based-mutation"><strong>Insertion-Based Mutation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.mutation.html#shuffle-mutation"><strong>Shuffle Mutation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.mutation.html#swap-mutation"><strong>Swap Mutation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.mutation.html#two-opt-mutation"><strong>Two-Opt Mutation</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.recombination.html">Recombination Operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.recombination.html#understanding-recombination"><strong>Understanding Recombination</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.recombination.html#recombination-examples"><strong>Recombination Examples</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.recombination.html#api-references"><strong>API References</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.arithmetic_crossover"><strong>Arithmetic Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.blxalpha_crossover"><strong>BLX-Alpha Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.byte_one_point_crossover"><strong>Byte One-Point Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.byte_uniform_crossover"><strong>Byte Uniform Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.flat_crossover"><strong>Flat Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.linear_crossover"><strong>Linear Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.one_point_crossover"><strong>One-Point Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.pmx_crossover"><strong>Partially Matched Crossover (PMX)</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.two_point_crossover"><strong>Two-Point Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.unfair_avarage_crossover"><strong>Unfair Average Crossover</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.recombination.html#module-pycellga.recombination.uniform_crossover"><strong>Uniform Crossover</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.selection.html">Selection Operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.selection.html#selection-mechanism"><strong>Selection Mechanism</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.selection.html#selection-example"><strong>Selection Example</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.selection.html#api-references"><strong>API References</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.selection.html#tournament-selection"><strong>Tournament Selection</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.selection.html#roulette-wheel-selection"><strong>Roulette Wheel Selection</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.problems.html">Problem Definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.problems.html#abstractproblem-class"><strong>AbstractProblem Class</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.problems.html#key-features">Key Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.problems.html#attributes">Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.problems.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.problems.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.problems.html#module-pycellga.problems.abstract_problem"><strong>API References</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.problems.html#pycellga.problems.abstract_problem.AbstractProblem"><code class="docutils literal notranslate"><span class="pre">AbstractProblem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.problems.html#single-objective-problems"><strong>Single-Objective Problems</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.problems.single_objective.html">Single-Objective Optimization Problems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#core-modules-api-refences"><strong>Core Modules API Refences</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#population-management">Population Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.population.OptimizationMethod"><code class="docutils literal notranslate"><span class="pre">OptimizationMethod</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.OptimizationMethod.ALPHA_CGA"><code class="docutils literal notranslate"><span class="pre">OptimizationMethod.ALPHA_CGA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.OptimizationMethod.CCGA"><code class="docutils literal notranslate"><span class="pre">OptimizationMethod.CCGA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.OptimizationMethod.CGA"><code class="docutils literal notranslate"><span class="pre">OptimizationMethod.CGA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.OptimizationMethod.MCCCGA"><code class="docutils literal notranslate"><span class="pre">OptimizationMethod.MCCCGA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.OptimizationMethod.SYNCGA"><code class="docutils literal notranslate"><span class="pre">OptimizationMethod.SYNCGA</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.population.Population"><code class="docutils literal notranslate"><span class="pre">Population</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.method_name"><code class="docutils literal notranslate"><span class="pre">Population.method_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.ch_size"><code class="docutils literal notranslate"><span class="pre">Population.ch_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.n_rows"><code class="docutils literal notranslate"><span class="pre">Population.n_rows</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.n_cols"><code class="docutils literal notranslate"><span class="pre">Population.n_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.gen_type"><code class="docutils literal notranslate"><span class="pre">Population.gen_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.problem"><code class="docutils literal notranslate"><span class="pre">Population.problem</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.vector"><code class="docutils literal notranslate"><span class="pre">Population.vector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.__init__"><code class="docutils literal notranslate"><span class="pre">Population.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.population.Population.initial_population"><code class="docutils literal notranslate"><span class="pre">Population.initial_population()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#individual-representation">Individual Representation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual"><code class="docutils literal notranslate"><span class="pre">Individual</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.chromosome"><code class="docutils literal notranslate"><span class="pre">Individual.chromosome</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.fitness_value"><code class="docutils literal notranslate"><span class="pre">Individual.fitness_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.position"><code class="docutils literal notranslate"><span class="pre">Individual.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.neighbors_positions"><code class="docutils literal notranslate"><span class="pre">Individual.neighbors_positions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.neighbors"><code class="docutils literal notranslate"><span class="pre">Individual.neighbors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.gen_type"><code class="docutils literal notranslate"><span class="pre">Individual.gen_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.ch_size"><code class="docutils literal notranslate"><span class="pre">Individual.ch_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.__init__"><code class="docutils literal notranslate"><span class="pre">Individual.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.generate_candidate"><code class="docutils literal notranslate"><span class="pre">Individual.generate_candidate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.getneighbors"><code class="docutils literal notranslate"><span class="pre">Individual.getneighbors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.getneighbors_positions"><code class="docutils literal notranslate"><span class="pre">Individual.getneighbors_positions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.randomize"><code class="docutils literal notranslate"><span class="pre">Individual.randomize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.setneighbors"><code class="docutils literal notranslate"><span class="pre">Individual.setneighbors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.individual.Individual.setneighbors_positions"><code class="docutils literal notranslate"><span class="pre">Individual.setneighbors_positions()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#grid-structure">Grid Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.grid.Grid"><code class="docutils literal notranslate"><span class="pre">Grid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.grid.Grid.n_rows"><code class="docutils literal notranslate"><span class="pre">Grid.n_rows</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.grid.Grid.n_cols"><code class="docutils literal notranslate"><span class="pre">Grid.n_cols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.grid.Grid.__init__"><code class="docutils literal notranslate"><span class="pre">Grid.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.grid.Grid.make_2d_grid"><code class="docutils literal notranslate"><span class="pre">Grid.make_2d_grid()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#byte-operators">Byte Operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.byte_operators.bits_to_float"><code class="docutils literal notranslate"><span class="pre">bits_to_float()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.byte_operators.bits_to_floats"><code class="docutils literal notranslate"><span class="pre">bits_to_floats()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.byte_operators.float_to_bits"><code class="docutils literal notranslate"><span class="pre">float_to_bits()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.byte_operators.floats_to_bits"><code class="docutils literal notranslate"><span class="pre">floats_to_bits()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pycellga.html#optimizer">Optimizer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#cellular-genetic-algorithm-cga"><strong>Cellular Genetic Algorithm (cga)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#synchronous-cellular-genetic-algorithm-sync-cga"><strong>Synchronous Cellular Genetic Algorithm (sync_cga)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#alpha-male-cellular-genetic-algorithm-alpha-cga"><strong>Alpha Male Cellular Genetic Algorithm (alpha_cga)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#improved-cga-with-machine-coded-operators"><strong>Improved CGA with Machine-Coded Operators</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#machine-coded-compact-cellular-genetic-algorithm-mcccga"><strong>Machine-Coded Compact Cellular Genetic Algorithm (mcccga)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycellga.html#api-references"><strong>API References</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.Result"><code class="docutils literal notranslate"><span class="pre">Result</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.optimizer.Result.__init__"><code class="docutils literal notranslate"><span class="pre">Result.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.optimizer.Result.chromosome"><code class="docutils literal notranslate"><span class="pre">Result.chromosome</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.optimizer.Result.fitness_value"><code class="docutils literal notranslate"><span class="pre">Result.fitness_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycellga.html#pycellga.optimizer.Result.generation_found"><code class="docutils literal notranslate"><span class="pre">Result.generation_found</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.alpha_cga"><code class="docutils literal notranslate"><span class="pre">alpha_cga()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.ccga"><code class="docutils literal notranslate"><span class="pre">ccga()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.cga"><code class="docutils literal notranslate"><span class="pre">cga()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.compete"><code class="docutils literal notranslate"><span class="pre">compete()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.generate_probability_vector"><code class="docutils literal notranslate"><span class="pre">generate_probability_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.mcccga"><code class="docutils literal notranslate"><span class="pre">mcccga()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.random_vector_between"><code class="docutils literal notranslate"><span class="pre">random_vector_between()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.sample"><code class="docutils literal notranslate"><span class="pre">sample()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.sync_cga"><code class="docutils literal notranslate"><span class="pre">sync_cga()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pycellga.html#pycellga.optimizer.update_vector"><code class="docutils literal notranslate"><span class="pre">update_vector()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_examples.html">Usage Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_examples.html#advanced-usage-examples">Advanced Usage Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_examples.html#customization-scenarios">Customization Scenarios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#ways-to-contribute">Ways to Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#development-setup">Development Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-request-guidelines">Pull Request Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#coding-standards">Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#running-tests">Running Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#testing-guidelines">Testing Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="citing.html">Citing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PYCELLGA Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<p>This section provides detailed instructions for installing <cite>pycellga</cite> and its dependencies.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<p>Before installing <cite>pycellga</cite>, make sure you have the following installed:</p>
+<ul class="simple">
+<li><p>Python 3.7 or higher</p></li>
+<li><p><cite>pip</cite> package manager</p></li>
+</ul>
+</section>
+<section id="installing-from-pypi">
+<h2>Installing from PyPI<a class="headerlink" href="#installing-from-pypi" title="Link to this heading"></a></h2>
+<p>The easiest way to install <cite>pycellga</cite> is via PyPI. You can use <cite>pip</cite> to install it directly from the Python Package Index:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pycellga
+</pre></div>
+</div>
+</section>
+<section id="installing-from-source">
+<h2>Installing from Source<a class="headerlink" href="#installing-from-source" title="Link to this heading"></a></h2>
+<p>To install <cite>pycellga</cite> from source, follow these steps:</p>
+<ol class="arabic">
+<li><p>Clone the repository from GitHub:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/SevgiAkten/pycellga.git
+</pre></div>
+</div>
+</li>
+<li><p>Navigate to the cloned repository directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>pycellga
+</pre></div>
+</div>
+</li>
+<li><p>Install the package using <cite>pip</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="optional-dependencies">
+<h2>Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Link to this heading"></a></h2>
+<p><cite>pycellga</cite> has optional dependencies for certain features. To use these features, you may need to install additional packages:</p>
+<ul>
+<li><p><strong>Jupyter Notebooks</strong>: If you plan to use Jupyter Notebooks for tutorials or examples, install <cite>jupyter</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyter
+</pre></div>
+</div>
+</li>
+<li><p><strong>Matplotlib</strong>: For visualizing optimization results, install <cite>matplotlib</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>matplotlib
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="verifying-the-installation">
+<h2>Verifying the Installation<a class="headerlink" href="#verifying-the-installation" title="Link to this heading"></a></h2>
+<p>To verify that <cite>pycellga</cite> is installed correctly, you can import it in Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pycellga</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pycellga</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If no errors occur, the installation is successful.</p>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<p>If you encounter any issues during installation, try the following steps:</p>
+<ol class="arabic">
+<li><p>Ensure you are using Python 3.7 or higher by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>--version
+</pre></div>
+</div>
+</li>
+<li><p>Make sure <cite>pip</cite> is up-to-date:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</pre></div>
+</div>
+</li>
+<li><p>If issues persist, refer to the GitHub repository for troubleshooting tips or to submit an issue.</p></li>
+</ol>
+</section>
+<section id="uninstallation">
+<h2>Uninstallation<a class="headerlink" href="#uninstallation" title="Link to this heading"></a></h2>
+<p>To uninstall <cite>pycellga</cite>, you can use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>pycellga
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="PYCELLGA Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pycellga.html" class="btn btn-neutral float-right" title="Components of pycellga" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sevgi Akten Karakaya, Mehmet Hakan Satman.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
